@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ElementalWordsKana")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1f385d1594764071cd7b94ea5ae1190c6029229")]
 [assembly: System.Reflection.AssemblyProductAttribute("ElementalWordsKana")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ElementalWordsKana")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
