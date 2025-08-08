@@ -1,0 +1,98 @@
+//Copy this whole file into the solutions window on CodeWars.
+// - https://www.codewars.com/kata/56fa9cd6da8ca623f9001233/train/csharp
+//The only differences are that I have added references that Codewars needs for lists and linq, and shifted the dictionary reference to their provided one.
+
+using static Preloaded.Elements;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace Kata
+{
+
+    public class ElementalWords
+    {
+
+        //Adds the dictionary keys to the end of the value and lower-cases the keys. Reduces string manipulation later.
+        //public static Dictionary<string, string> elements = cutdownElements.ToDictionary(a => a.Key.ToLower(), a => a.Value + " (" + a.Key.ToString() + ")");
+        public static Dictionary<string, string> elements = ELEMENTS.ToDictionary(a => a.Key.ToLower(), a => a.Value + " (" + a.Key.ToString() + ")");
+
+
+        //Class CodeWars tries to run.
+        public static string[][] ElementalForms(string word)
+        {
+            return ElementalFormsRecursiveStart(word);
+        }
+
+        /// <summary>
+        /// Sets up and starts the recursive method.
+        /// </summary>
+        /// <param name="word"></param>
+        /// <returns>String[][] of possible elemental combinations</returns>
+        public static string[][] ElementalFormsRecursiveStart(string word)
+        {
+
+            //Basic input checking
+            if (string.IsNullOrWhiteSpace(word))
+            {
+                word = "";
+            }
+            
+            word = word.ToLower();
+
+            if (word.Length == 0)
+            {
+                return [];
+            }
+
+            //Running this on lists since we're adding elements as we go.
+            List<List<string>> outputList = new List<List<string>>();
+            List<string> runningList = new List<string>();
+
+            List<List<string>> output = ElementalFormsRecursive(word, outputList, runningList);
+
+            //Shift the output back to the expected type, an array of string arrays.
+            return output.Select(a => a.ToArray()).ToArray();
+        }
+
+
+        /// <summary>
+        /// Goes through the word provided, finds matches in the elements dictionary and stores them in the outputList, and returns when done.
+        /// </summary>
+        /// <returns>Returns a list of lists.</returns>
+        public static List<List<string>> ElementalFormsRecursive(string word, List<List<string>> outputList, List<string> runningList)
+        {
+            //If we get here with a word length of 0, we have completed a word.
+            //Add it to the outputList and return. 
+            if (word.Length == 0)
+            {
+                outputList.Add(runningList);
+                return outputList;
+            }
+
+            //Check dictionary for the first 1,2 and 3 characters.
+            for (int i = 1; i < 4; i++)
+            {
+                if (word.Length >= i)
+                {
+                    string key = word.Substring(0, i);
+                    string? value;
+
+                    if (elements.TryGetValue(key, out value))
+                    {
+                        //Using append here to pass through the value of the running list + new data.
+                        //As a result, runningList is clean for the next loop.
+                        List<string> nextRunningList = runningList.Append(value).ToList();
+                        outputList = ElementalFormsRecursive(word.Substring(i), outputList, nextRunningList);
+                    }
+                }
+                else
+                {
+                    //Exit loop immediately if word is lever less than i. No need to keep running it.
+                    break;
+                }
+            }
+
+            return outputList;
+        }
+    }
+}

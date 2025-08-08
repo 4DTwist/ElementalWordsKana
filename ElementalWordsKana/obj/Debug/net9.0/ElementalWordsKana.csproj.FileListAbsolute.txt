@@ -1,0 +1,14 @@
+C:\Repos\ElementalWordsKana\ElementalWordsKana\bin\Debug\net9.0\ElementalWordsKana.exe
+C:\Repos\ElementalWordsKana\ElementalWordsKana\bin\Debug\net9.0\ElementalWordsKana.deps.json
+C:\Repos\ElementalWordsKana\ElementalWordsKana\bin\Debug\net9.0\ElementalWordsKana.runtimeconfig.json
+C:\Repos\ElementalWordsKana\ElementalWordsKana\bin\Debug\net9.0\ElementalWordsKana.dll
+C:\Repos\ElementalWordsKana\ElementalWordsKana\bin\Debug\net9.0\ElementalWordsKana.pdb
+C:\Repos\ElementalWordsKana\ElementalWordsKana\obj\Debug\net9.0\ElementalWordsKana.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repos\ElementalWordsKana\ElementalWordsKana\obj\Debug\net9.0\ElementalWordsKana.AssemblyInfoInputs.cache
+C:\Repos\ElementalWordsKana\ElementalWordsKana\obj\Debug\net9.0\ElementalWordsKana.AssemblyInfo.cs
+C:\Repos\ElementalWordsKana\ElementalWordsKana\obj\Debug\net9.0\ElementalWordsKana.csproj.CoreCompileInputs.cache
+C:\Repos\ElementalWordsKana\ElementalWordsKana\obj\Debug\net9.0\ElementalWordsKana.dll
+C:\Repos\ElementalWordsKana\ElementalWordsKana\obj\Debug\net9.0\refint\ElementalWordsKana.dll
+C:\Repos\ElementalWordsKana\ElementalWordsKana\obj\Debug\net9.0\ElementalWordsKana.pdb
+C:\Repos\ElementalWordsKana\ElementalWordsKana\obj\Debug\net9.0\ElementalWordsKana.genruntimeconfig.cache
+C:\Repos\ElementalWordsKana\ElementalWordsKana\obj\Debug\net9.0\ref\ElementalWordsKana.dll
