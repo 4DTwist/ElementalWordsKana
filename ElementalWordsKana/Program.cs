@@ -105,7 +105,9 @@ namespace ElementalWordsKana
                 if (word.Length >= i)
                 {
                     string key = word.Substring(0, i);
+                    #nullable enable
                     string? value;
+                    #nullable disable
 
                     if (elements.TryGetValue(key, out value))
                     {
